@@ -3,6 +3,6 @@ FROM balenalib/%%RESIN_MACHINE_NAME%%-alpine:edge-run
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
   gcc musl-dev rust cargo protobuf
 
-RUN cargo install --git https://github.com/ankitects/anki.git --tag 2.1.66 anki-sync-server
+RUN cargo install --git https://github.com/ankitects/anki.git --tag 24.06.3 anki-sync-server
 
 CMD [ "/root/.cargo/bin/anki-sync-server" ]
